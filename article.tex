@@ -1,5 +1,7 @@
 \documentclass[]{article}
 \usepackage{amsmath}
+\setlength{\parindent}{0pt} % no indent at beginning of new paragraph
+\setlength{\parskip}{1pt} % insert 1pt high line at beginning of new 
 %opening
 \title{}
 \author{}
@@ -28,7 +30,8 @@
 \end{pmatrix}
 \end{equation}
 
-\subsection{Event named \textit{a}}
+If we have to give the event a name, we exchange x with the name or (if it's importaant to indicate the nature of the value) add the name in scriptstyle:
+
 \begin{equation}
 \underline{x{\scriptstyle a}}_i
 =
@@ -47,7 +50,7 @@
 \end{pmatrix}
 \end{equation}
 
-\subsection{Oriented route from Event \textit{a} to Event \textit{b}}
+\subsection{Distance between Event \textit{a} and Event \textit{b}}
 \begin{equation}
 \underline{\Delta x{\scriptstyle a,b}}_i
 =
@@ -72,6 +75,7 @@
 	(x{\scriptstyle b}_3-x{\scriptstyle a}_3) + i\ c\ (t{\scriptstyle b}_3-t{\scriptstyle a})_3
 \end{pmatrix}
 \end{equation}
+This value is oriented (has a sign ...) and dependent on the observer (coordinate system).
 
 \subsection{Squared distance between two Events}
 \begin{equation}
@@ -92,5 +96,27 @@
 &\quad + i\, 2\, c\, (\Delta x_0 \Delta t_0 + \Delta x_1 \Delta t_1 +\Delta x_2 \Delta t_2 +\Delta x_3 \Delta t_3)
 \end{split}
 \end{equation}
-This value is independent of the observer.
+This value is not oriented and independent of the observer.
+
+\subsection{Velocity}
+The quotients of distance between two closely neighbored events are the components of the velocity tensor:
+\begin{equation}
+	\underline{v}_{ij}
+	=
+	\frac{\underline{\Delta x}_i}{\underline{\Delta x}_j}
+	=
+	\frac{x_i + i\, c\, t_i}{x_j + i\, c\, t_j}
+	=
+	\begin{pmatrix}
+	v_{00} & v_{01} & v_{02} & v_{03}\\
+	v_{10} & v_{11} & v_{12} & v_{13}\\
+	v_{20} & v_{21} & v_{22} & v_{23}\\
+	v_{30} & v_{31} & v_{32} & v_{33}\\
+	\end{pmatrix}
+\end{equation}
+As the distances are observer-dependent this tensor is dependent on the observer as well.
+
+
+
+
 \end{document}
